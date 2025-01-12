@@ -2,8 +2,8 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-  id("uk.gov.justice.hmpps.gradle-spring-boot") version "6.0.8"
-  kotlin("plugin.spring") version "2.0.21"
+  id("uk.gov.justice.hmpps.gradle-spring-boot") version "6.1.2"
+  kotlin("plugin.spring") version "2.1.0"
 }
 
 configurations {
@@ -11,7 +11,7 @@ configurations {
 }
 
 dependencies {
-  implementation("uk.gov.justice.service.hmpps:hmpps-kotlin-spring-boot-starter:1.0.8")
+  implementation("uk.gov.justice.service.hmpps:hmpps-kotlin-spring-boot-starter:1.1.1")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
 
   // Redis dependencies
@@ -28,7 +28,7 @@ dependencies {
   implementation("org.bouncycastle:bcpkix-jdk18on:1.79")
 
   // OpenAPI dependencies
-  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
+  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.3")
 
   // MVC
   implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
@@ -39,9 +39,9 @@ dependencies {
 
   // Test dependencies
   testImplementation(kotlin("test"))
-  testImplementation("net.datafaker:datafaker:2.4.1")
+  testImplementation("net.datafaker:datafaker:2.4.2")
   testImplementation("com.ninja-squad:springmockk:4.0.2")
-  testImplementation("org.wiremock:wiremock-standalone:3.9.2")
+  testImplementation("org.wiremock:wiremock-standalone:3.10.0")
   testImplementation("io.jsonwebtoken:jjwt-impl:0.12.6")
   testImplementation("io.jsonwebtoken:jjwt-jackson:0.12.6")
 }
