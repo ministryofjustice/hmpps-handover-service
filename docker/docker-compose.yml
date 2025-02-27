@@ -31,7 +31,7 @@ services:
       - /var/lib/postgresql
 
   coordinator-api:
-    image: quay.io/hmpps/hmpps-assess-risks-and-needs-coordinator-api:latest
+    image: ghcr.io/ministryofjustice/hmpps-assess-risks-and-needs-coordinator-api:latest
     networks:
       - hmpps
     depends_on:
@@ -55,7 +55,7 @@ services:
       CLIENT_SECRET: clientsecret
 
   san-api:
-    image: quay.io/hmpps/hmpps-strengths-based-needs-assessments-api:latest
+    image: ghcr.io/ministryofjustice/hmpps-strengths-based-needs-assessments-api:latest
     networks:
       - hmpps
     depends_on:
@@ -74,7 +74,7 @@ services:
       FORM_CONFIG_BASE_URL: http://san-ui:3000/config
 
   san-ui:
-    image: quay.io/hmpps/hmpps-strengths-based-needs-assessments-ui:latest
+    image: ghcr.io/ministryofjustice/hmpps-strengths-based-needs-assessments-ui:latest
     networks:
       - hmpps
     depends_on:
